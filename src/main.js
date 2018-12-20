@@ -40,4 +40,5 @@ var config = {
   storageBucket: 'shoppingvue.appspot.com',
   messagingSenderId: '296078881854'
 }
-firebase.initializeApp(config)
+export default !firebase.apps.length
+  ? firebase.initializeApp(config) : firebase.app()
